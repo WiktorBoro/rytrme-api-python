@@ -53,6 +53,7 @@ response (list with dictionary):
 ```
 
 **If you want to write a blog section in English, the only parameter you need to complete is the input_contexts above**
+
 **If you want to write something else, change use-case and complete the appropriate dictionary**
 
 ### All languages list
