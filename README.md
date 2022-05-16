@@ -23,7 +23,7 @@ from rytrme_api_python import get_text_from_rytr_me_api
 
 ```language="🇺🇸 English"``` - language in which the texts will be generated - **change optional**
 
-```tone="Casual"```- tons in which the text will be - **change optional**
+```tone="Casual"``` - tons in which the text will be - **change optional**
 
 ```use_case="Blog Section Writing"``` - type of text that will be generated - **change optional**
 
