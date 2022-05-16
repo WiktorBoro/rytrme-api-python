@@ -27,7 +27,7 @@ from rytrme_api_python import get_text_from_rytr_me_api
 
 ```use_case="Blog Section Writing"``` - type of text that will be generated - **change optional**
 
-```input_contexts = {"SECTION_TOPIC_LABEL": "Your topic", 'SECTION_KEYWORDS_LABEL': "Your keywords"}``` - required - dictionary with your parametr, more information below
+```input_contexts = {"SECTION_TOPIC_LABEL": "Your topic", 'SECTION_KEYWORDS_LABEL': "Your keywords"}```- dictionary with your parametr, more information below - **required**
 
 ```variations = 1``` - number of texts in response - **change optional**
 
@@ -57,7 +57,7 @@ response (list with dictionary):
 
 ### All languages list
 
-(Name) - (ID) - you can use name or ID, but with more calls it is recommended to use ID
+(Name) - (ID) - you can use name or ID as parametr. With more calls it is recommended to use ID
 
 ```
 🇦🇪 Arabic  -  60c4eb424660040013ca8a9f
@@ -98,7 +98,7 @@ response (list with dictionary):
 
 ### All tone list
 
-(Name) - (ID) - you can use name or ID, but with more calls it is recommended to use ID
+(Name) - (ID) - you can use name or ID as parametr. With more calls it is recommended to use ID
 
 ```
 Appreciative  -  6058207530f7b1000c1c4f86
@@ -127,7 +127,7 @@ Worried  -  605821e030f7b1000c1c4f95
 
 ### All use-case list
 
-(Name) - (ID) - (input_contexts=dictyou need to complete for a given use-case) - you can use name or ID, but with more calls it is recommended to use ID
+(Name) - (ID) - (input_contexts=dictyou need to complete for a given use-case) - you can use name or ID as parametr. With more calls it is recommended to use ID
 
 ```
 Blog Idea & Outline  -  60a40cf5da9d76000ccc2828 - input_contexts={'PRIMARY_KEYWORD_LABEL': 'Your parametrs'}
