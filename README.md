@@ -18,6 +18,11 @@ pip install rytrme-api-python
 from rytrme_api_python import get_text_from_rytr_me_api
 ```
 
+### Main function
+```
+get_text_from_rytr_me_api()
+```
+
 ## All attributes with basic parametrs:
 ```api_key=<"YOUR API KEY">``` - **required**
 
