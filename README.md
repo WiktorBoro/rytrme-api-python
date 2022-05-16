@@ -40,7 +40,6 @@ from rytrme_api_python import get_text_from_rytr_me_api
 ## Example of use
 
 ```
-
 input_contexts = {"SECTION_TOPIC_LABEL": "Role of AI Writers in the Future of Copywriting", 'SECTION_KEYWORDS_LABEL': 'ai writer, blog generator, best writing software'}
 
 response = get_text_from_rytr_me_api(api_key=<"YOUR API KEY">, input_contexts=input_contexts)
@@ -58,7 +57,7 @@ response (list with dictionary):
 
 ### All languages list
 
-(Name) - (ID) - you can use this or that, but with more calls it is recommended to use ID
+(Name) - (ID) - you can use name or ID, but with more calls it is recommended to use ID
 
 ```
 🇦🇪 Arabic  -  60c4eb424660040013ca8a9f
@@ -99,7 +98,7 @@ response (list with dictionary):
 
 ### All tone list
 
-(Name) - (ID) - you can use this or that, but with more calls it is recommended to use ID
+(Name) - (ID) - you can use name or ID, but with more calls it is recommended to use ID
 
 ```
 Appreciative  -  6058207530f7b1000c1c4f86
@@ -128,7 +127,7 @@ Worried  -  605821e030f7b1000c1c4f95
 
 ### All use-case list
 
-(Name) - (ID) - (input_contexts=dictyou need to complete for a given use-case) - you can use this or that, but with more calls it is recommended to use ID
+(Name) - (ID) - (input_contexts=dictyou need to complete for a given use-case) - you can use name or ID, but with more calls it is recommended to use ID
 
 ```
 Blog Idea & Outline  -  60a40cf5da9d76000ccc2828 - input_contexts={'PRIMARY_KEYWORD_LABEL': 'Your parametrs'}
