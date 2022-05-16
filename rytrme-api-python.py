@@ -1,4 +1,5 @@
 from requests import get, post
+from re import match
 
 
 def get_id(our_parametr: str,
@@ -9,8 +10,10 @@ def get_id(our_parametr: str,
     response_id = get(url, headers=api_headers)
 
     for data in response_id.json()['data']:
+        # if we input name instead id, function get id based on name
         if data["name"] != our_parametr:
             continue
+        # if we change use-cases, function check we add correct 'contextInputs'
         if url == 'https://api.rytr.me/v1/use-cases':
             if set(use_case_detal) != set(keyLabel['keyLabel'] for keyLabel in data['contextInputs']):
                 raise Exception(f"Invalid parameter: {use_case_detal}")
@@ -31,20 +34,23 @@ def get_text_from_rytr_me_api(api_key: str,
     api_headers = {"Authentication": f"Bearer {api_key}",
                    "Content-Type": "application/json"}
 
+    # pattern checks user entered id, if not we looking id by name
+    token_pattern = r'^[0-9a-z]{20,26}$'
+
     id_dict = {
-                'language_id': language if language == '607adac76f8fe5000c1e636d'
+                'language_id': language if match(token_pattern, language)
                 else get_id(our_parametr=language,
                             api_headers=api_headers,
                             url='https://api.rytr.me/v1/languages',
                             use_case_detal=set()),
 
-                'tone_id': tone if tone == '60572a639bdd4272b8fe358b'
+                'tone_id': tone if match(token_pattern, tone)
                 else get_id(our_parametr=tone,
                             api_headers=api_headers,
                             url='https://api.rytr.me/v1/tones',
                             use_case_detal=set()),
 
-                'use_case_id': use_case if use_case == '60584cf2c2cdaa000c2a7954'
+                'use_case_id': use_case if match(token_pattern, use_case)
                 else get_id(our_parametr=use_case,
                             api_headers=api_headers,
                             url='https://api.rytr.me/v1/use-cases',
